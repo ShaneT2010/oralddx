@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oral Pathology Differential Diagnosis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-switch">
+            <button id="switch-to-en">English</button>
+            <button id="switch-to-zh">繁體中文</button>
+        </div>
+        <h1 data-en="Oral Pathology Differential Diagnosis" data-zh="口腔病理學鑑別診斷">Oral Pathology Differential Diagnosis</h1>
+        <form id="symptomForm">
+            <fieldset data-en="Sex" data-zh="性別">
+                <legend>Sex</legend>
+                <label data-en="Male" data-zh="男性"><input type="radio" name="sex" value="male"> Male</label>
+                <label data-en="Female" data-zh="女性"><input type="radio" name="sex" value="female"> Female</label>
+            </fieldset>
+            <fieldset data-en="Age Group" data-zh="年齡組">
+                <legend>Age Group</legend>
+                <label data-en="Newborn" data-zh="新生兒"><input type="radio" name="age" value="newborn"> Newborn</label>
+                <label data-en="Child" data-zh="兒童"><input type="radio" name="age" value="child"> Child</label>
+                <label data-en="Teen" data-zh="青少年"><input type="radio" name="age" value="teen"> Teen</label>
+                <label data-en="Young Adult" data-zh="青年"><input type="radio" name="age" value="young_adult"> Young Adult</label>
+                <label data-en="Adult (30-50 y/o)" data-zh="成年人 (30-50歲)"><input type="radio" name="age" value="adult"> Adult (30-50 y/o)</label>
+                <label data-en="Middle-aged (50-65 y/o)" data-zh="中年 (50-65歲)"><input type="radio" name="age" value="middle_aged"> Middle-aged (50-65 y/o)</label>
+                <label data-en="Elder (65+ y/o)" data-zh="老年人 (65歲以上)"><input type="radio" name="age" value="elder"> Elder (65+ y/o)</label>
+            </fieldset>
+            <fieldset data-en="Predisposing Factors" data-zh="誘發因素">
+                <legend>Predisposing Factors</legend>
+                <label data-en="Alcohol" data-zh="酒精"><input type="checkbox" name="predisposing" value="alcohol"> Alcohol</label>
+                <label data-en="Betel Nut" data-zh="檳榔"><input type="checkbox" name="predisposing" value="betel_nut"> Betel Nut</label>
+                <label data-en="Cigarette" data-zh="香煙"><input type="checkbox" name="predisposing" value="cigarette"> Cigarette</label>
+                <label data-en="Diabetes Mellitus" data-zh="糖尿病"><input type="checkbox" name="predisposing" value="diabetes_mellitus"> Diabetes Mellitus</label>
+                <label data-en="Hypertension" data-zh="高血壓"><input type="checkbox" name="predisposing" value="hypertension"> Hypertension</label>
+                <label data-en="Pregnancy" data-zh="懷孕"><input type="checkbox" name="predisposing" value="pregnancy"> Pregnancy</label>
+                <label data-en="Psychologically Pressured" data-zh="心理壓力"><input type="checkbox" name="predisposing" value="psychologically_pressured"> Psychologically Pressured</label>
+            </fieldset>
+            <fieldset data-en="Location of Illness" data-zh="病變位置">
+                <legend>Location of Illness</legend>
+                <img src="oral-zones.png" usemap="#oralmap" alt="Oral Zones" id="oral-zones-img">
+                <map name="oralmap">
+                    <area shape="rect" coords="34,44,270,350" href="#" data-en="Upper Right Buccal" data-zh="右上頰" alt="Upper Right Buccal">
+                    <area shape="rect" coords="290,172,333,250" href="#" data-en="Lower Left Lingual" data-zh="左下舌" alt="Lower Left Lingual">
+                    <!-- Add more areas with appropriate coordinates and labels -->
+                </map>
+                <input type="hidden" name="location" id="location">
+            </fieldset>
+            <button type="submit" data-en="Get Differential Diagnosis" data-zh="獲取鑑別診斷">Get Differential Diagnosis</button>
+        </form>
+        <div id="results"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
