@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.language-switch {
+    text-align: right;
+    margin-bottom: 20px;
+}
+form {
+    margin-bottom: 20px;
+}
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+label {
+    display: block;
+    margin-top: 10px;
+}
+button {
+    display: block;
+    margin-top: 20px;
+}
+#results {
+    margin-top: 20px;
+}
+#oral-zones-img {
+    width: 100%;
+    height: auto;
+}
+area {
+    cursor: pointer;
+}
